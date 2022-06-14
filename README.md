@@ -26,12 +26,13 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 - What open ports and running services did Shodan find:
   - `Port 80` Apache Tomcat/Coyote JSP Engine
   - `Port 443` Apahce Tomcat/Coyote JSP Engine
+ ![Open ports](Images/open_ports.png)
 #### Step 4: Recon-ng
 
 - Install the Recon module `xssed`. 
 - Set the source to `demo.testfire.net`. 
 - Run the module. 
-
+![Recon-ng](Images/Recon_ng.png)
 Is Altoro Mutual vulnerable to XSS: Yes there is 1 vulnerability
 
 ### Step 5: Zenmap
