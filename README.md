@@ -24,32 +24,33 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 #### Step 3: Shodan
 
 - What open ports and running services did Shodan find:
-
+  - `Port 80` Apache Tomcat/Coyote JSP Engine
+  - `Port 443` Apahce Tomcat/Coyote JSP Engine
 #### Step 4: Recon-ng
 
 - Install the Recon module `xssed`. 
 - Set the source to `demo.testfire.net`. 
 - Run the module. 
 
-Is Altoro Mutual vulnerable to XSS: 
+Is Altoro Mutual vulnerable to XSS: Yes there is 1 vulnerability
 
 ### Step 5: Zenmap
 
 Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
 
 - Command for Zenmap to run a service scan against the Metasploitable machine: 
- 
+ - nmap -sV 192.168.0.10
 - Bonus command to output results into a new text file named `zenmapscan.txt`:
-
+  - `map -sV -oN zenmapscan.txt --script smb-enum-shares 192.168.0.10`
 - Zenmap vulnerability script command: 
-
+  - `nmap --script smb-enum-shares 192.168.0.10`
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability:
-
+  - The vulnerability is anonymous users have read/write access to their SAMBA shares files.
   2. Why is it dangerous:
-
+  - This is dangerous because it allows annoymous users to access to files and have the ability to change data in these files.
   3. What mitigation strategies can you recommendations for the client to protect their server:
-
+  - You could disable the annoymous log access with the FTP server. 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
 
