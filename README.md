@@ -57,5 +57,5 @@ Your client has asked that you help identify any vulnerabilities with their file
   3. What mitigation strategies can you recommendations for the client to protect their server:
   - You could disable the annoymous log access with the FTP server. 
 ---
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
+ 
 
